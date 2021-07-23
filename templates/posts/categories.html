@@ -1,0 +1,25 @@
+{% extends 'posts/base.html' %}
+
+{% block content %}
+    <h1>{{ cats }} Category</h1><hr>
+    {% if category_post %}
+    <ul>
+        {% for post in category_post %}
+            <br>
+            <li>
+                <a href="{% url 'article_detail' post.pk %}" class="btn btn-info">{{ post.title }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                {{ post.category }}&nbsp&nbsp&nbsp&nbsp&nbsp
+                {{post.body|slice:":12"}}
+                {% if user.is_authenticated %}
+                <small><a href="{% url 'update_post' post.pk %}" class="btn bg-dark btn-outline-warning">(Edit)</a></small>
+                <small><a href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger">(Delete)</a></small>
+                 <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>Sorry, we do not have any post in this category. We are working hard on it.</h2>
+        <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
+    {% endif %}
+{% endblock %}
