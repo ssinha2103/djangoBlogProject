@@ -6,18 +6,31 @@
 
 {% block content %}
     <h1>Posts</h1>
-    <ul><hr>
-        <h2>{{ post.title }}</h2><br>
-        <h4>Category:- {{ post.category }}</h4><br>
-        By :- {{ post.author.first_name }} {{ post.author.last_name   }}<br>
-        {{ post.body }}<br>
-        From :- {{ post.author.email }}<br>
-        On :- {{ post.post_date }}<br><br>
-{#        Last Login at -{{ post.author.last_login }}<br><br>#}
-        <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
-        {% if user.is_authenticated %}
-        <small><a href="{% url 'update_post' post.pk %}" class="btn bg-dark btn-outline-warning">(Edit :- {{ post.title }})</a></small>
-        <small><a href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger">(Delete)</a></small>
+    <br>
+    <hr>
+    <h2>{{ post.title }}</h2><br>
+    <h4>Category:- {{ post.category }}</h4><br>
+    By :- {{ post.author.first_name }} {{ post.author.last_name }}<br>
+    {{ post.body|safe }}<br>
+    From :- {{ post.author.email }}<br>
+    On :- {{ post.post_date }}<br><br>
+    <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
+
+
+    {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
+            <small><a href="{% url 'update_post' post.pk %}" class="btn bg-dark btn-outline-warning">(Edit
+                :- {{ post.title }})</a></small>
+            <small><a href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger">(Delete)</a></small>
         {% endif %}
-    </ul>
+    {% endif %}
+    <br><br>
+    <hr>
+    <form action="{% url 'like_post' post.pk %}" method="post">
+        {% csrf_token %}
+        <button type="submit" , name="post_id" , value="{{ post.id }}" , class="btn btn-success">
+            Like
+        </button>
+    </form>
+    <br>
 {% endblock %}

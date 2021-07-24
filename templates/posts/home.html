@@ -1,17 +1,22 @@
 {% extends 'posts/base.html' %}
 
 {% block content %}
-    <h1>All Blogs</h1><hr>
+    <h1>All Blogs</h1>
+    <hr>
     <ul>
         {% for post in object_list %}
             <br>
             <li>
                 <a href="{% url 'article_detail' post.pk %}" class="btn btn-info">{{ post.title }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
                 <a href="{% url 'category' post.category %}">{{ post.category }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-{#                {{post.body|slice:":12"}}#}
+                {#                {{post.body|slice:":12"}}#}
                 {% if user.is_authenticated %}
-                <small><a href="{% url 'update_post' post.pk %}" class="btn bg-dark btn-outline-warning">(Edit)</a></small>
-                <small><a href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger">(Delete)</a></small>
+                    {% if user.id == post.author.id %}
+                        <small><a href="{% url 'update_post' post.pk %}"
+                                  class="btn bg-dark btn-outline-warning">(Edit)</a></small>
+                        <small><a href="{% url 'delete_post' post.pk %}"
+                                  class="btn btn-outline-danger">(Delete)</a></small>
+                    {% endif %}
                 {% endif %}
             </li>
         {% endfor %}

@@ -21,9 +21,11 @@ class Post(models.Model):
     body = models.TextField()
     post_date = models.DateTimeField(auto_now_add=True)
     category = models.CharField(max_length=255, default='Uncategorized')
+    likes = models.ManyToManyField(User, related_name='blog_posts')
 
     def __str__(self):
         return self.title + ' | ' + str(self.author)
 
     def get_absolute_url(self):
-        return reverse('article_detail', args=(str(self.id)))
+        # return reverse('article_detail', args=(str(self.id)))
+        return reverse('home')
