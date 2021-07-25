@@ -8,16 +8,18 @@
             <br>
             <li>
                 <a href="{% url 'article_detail' post.pk %}" class="btn btn-info">{{ post.title }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                <a href="{% url 'category' post.category %}">{{ post.category }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
-                {#                {{post.body|slice:":12"}}#}
+                Category:- <a href="{% url 'category' post.category %}"> {{ post.category }}</a>&nbsp&nbsp&nbsp&nbsp&nbsp
+                <br>By:- {{ post.author }}<br>
+                <br>{{ post.body|truncatewords_html:30|safe }}<br>
                 {% if user.is_authenticated %}
                     {% if user.id == post.author.id %}
                         <small><a href="{% url 'update_post' post.pk %}"
                                   class="btn bg-dark btn-outline-warning">(Edit)</a></small>
                         <small><a href="{% url 'delete_post' post.pk %}"
-                                  class="btn btn-outline-danger">(Delete)</a></small>
+                                  class="btn btn-outline-danger">(Delete)</a></small><br><br><br>
                     {% endif %}
                 {% endif %}
+                <hr>
             </li>
         {% endfor %}
     </ul>
