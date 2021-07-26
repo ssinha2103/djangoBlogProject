@@ -1,7 +1,7 @@
 from django import forms
 from theblog.models import *
 
-choices = Categories.objects.all().values_list('name','name')
+choices = Categories.objects.all().values_list('name', 'name')
 choice_list = []
 for i in choices:
     choice_list.append(i)
@@ -10,7 +10,7 @@ for i in choices:
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'author', 'category', 'body')
+        fields = ('title', 'title_tag', 'author', 'category', 'header_image', 'body')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': "This is the title"}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
@@ -24,7 +24,7 @@ class PostForm(forms.ModelForm):
 class EditForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'category', 'body')
+        fields = ('title', 'title_tag', 'category', 'body', 'header_image')
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': "This is the title"}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
