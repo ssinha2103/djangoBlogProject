@@ -10,12 +10,12 @@
     <hr>
     <h2>{{ post.title }}</h2><br>
     <h4>Category:- {{ post.category }}</h4><br>
-    By :- {{ post.author.first_name }} {{ post.author.last_name }}<br>
-    {{ post.body|safe }}<br>
-    From :- {{ post.author.email }}<br>
-    On :- {{ post.post_date }}<br><br>
+{#    By :- {{ post.author.first_name }} {{ post.author.last_name }}<br>#}
+    {{ post.body|safe }}
+{#    From :- {{ post.author.email }}<br>#}
+{#    On :- {{ post.post_date }}<br><br>#}
     {% if post.header_image %}
-        <br><img src="{{ post.header_image.url }}"><br><br>
+        <br><img src="{{ post.header_image.url }}" style="width: auto; height: auto;max-width: 600px;max-height: 600px" ><br><br>
     {% endif %}
     <a href="{% url 'home' %}" class="btn btn-outline-dark">Home</a>
 
@@ -27,6 +27,17 @@
             <small><a href="{% url 'delete_post' post.pk %}" class="btn btn-outline-danger">(Delete)</a></small>
         {% endif %}
     {% endif %}
+    <br><br>
+    <h5>By:-</h5>
+    <img src="{{ post.author.profile.profile_pic.url}}" width="80dp" height="100dp" alt="Prolile pic"><br>
+    {{ post.author.first_name }}
+    {{ post.author.last_name }}<br>
+    {{ post.author.profile.web_url.url}}
+    {{ post.author.profile.fb_url.url}}
+    {{ post.author.profile.twitter_url.url}}
+    {{ post.author.profile.insta_url.url}}
+    From :- {{ post.author.email }}<br>
+    On :- {{ post.post_date }}<br><br>
     <br><br>
     <hr>
     <form action="{% url 'like_post' post.pk %}" method="post">

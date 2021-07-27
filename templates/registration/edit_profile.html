@@ -5,7 +5,8 @@
 
 
 {% block content %}
-    <h1>Edit Your Profile</h1><hr>
+    <h1>Edit Your Profile</h1><hr><br>
+    <p>{{ user.profile.bio }}</p><br>
     <div class="form-group">
         <form method="POST">
             {% csrf_token %}
