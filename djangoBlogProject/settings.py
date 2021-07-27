@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-%=vo!mo8du&ggt
 # DEBUG = True
 
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['fast-hollows-31051.herokuapp.com']
 
 # Application definition
 
