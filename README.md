@@ -14,8 +14,7 @@
 <a href="https://www.instagram.com/shivani_gupta_57/">
   <img align="left" alt="Sudarshan's Instagram" width="22px"  src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
-  
-  
+ 
   <br/>
 <br/>
 
@@ -35,7 +34,11 @@
  <img align="center" src="https://github-readme-stats.vercel.app/api?username=ssinha2103&show_icons=true&theme=dracula&line_height=27" alt="Shivani's github stats"/>
 </a>
 
+<br>
+<br>
+<br>
 
-
-<h1>This a Blogging website implemented using Django.<h1>
+<h1>This a Blogging website implemented using Django.</h1>
+  
+  <h3>I have attached a video reference of how it works. Please do have a look. </h3>
 
