@@ -3,17 +3,16 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=SSINHA2103&label=Profile Views&color=blue&style=plastic" alt="shivanigupta19" /> </p>
 
 <a href="https://www.linkedin.com/in/ssinha2103/">
-  <img align="left" alt="Sudarshan's Linkdein" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+  <img align="left" alt="Sudarshan's Linkdein" width="22px" bgcolor=”#800000" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
-  
-  <a href="https://github.com/ssinha2199">
-  <img align="left" alt="Sudarshan's Github" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
+                                                                                                                                                   
+<a href="https://github.com/ssinha2199">
+  <img align="left" alt="Sudarshan's Github" width="22px" bgcolor=”#800000" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/github.svg" />
 </a>
 <a href="https://web.telegram.org/#/ssinha2103">
-  <img align="left" alt="Sudarshan's Telegram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/telegram.svg" />
 </a>
 <a href="https://www.instagram.com/shivani_gupta_57/">
-  <img align="left" alt="Sudarshan's Instagram" width="22px" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
+  <img align="left" alt="Sudarshan's Instagram" width="22px" bgcolor=”#800000" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/instagram.svg" />
 </a>
   
   
