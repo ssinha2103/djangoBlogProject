@@ -38,8 +38,22 @@
 <br>
 <br>
 
+<!DOCTYPE html>
+<html>
+<body>
+  
 <h1>This a Blogging website implemented using Django.</h1>
   
   <h3>I have attached a video reference of how it works. Please do have a look. </h3>
 
 <iframe src="https://drive.google.com/file/d/1jG03BCHl6KujdcQpvPB44_d_j6eYCTu_/preview" width="640" height="480" allow="autoplay"></iframe>
+
+</body>
+</html>
+
+<!-- <h1>This a Blogging website implemented using Django.</h1>
+  
+  <h3>I have attached a video reference of how it works. Please do have a look. </h3>
+
+<iframe src="https://drive.google.com/file/d/1jG03BCHl6KujdcQpvPB44_d_j6eYCTu_/preview" width="640" height="480" allow="autoplay"></iframe>
+ -->
