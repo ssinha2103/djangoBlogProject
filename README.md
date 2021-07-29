@@ -3,7 +3,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=SSINHA2103&label=Profile Views&color=blue&style=plastic" alt="shivanigupta19" /> </p>
 
 <a href="https://www.linkedin.com/in/ssinha2103/">
-  <img align="left" alt="Sudarshan's Linkdein" width="22px" style="background-color: #000000" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
+  <img align="left" alt="Sudarshan's Linkdein" width="22px" style="background-color:white;" src="https://cdn.jsdelivr.net/npm/simple-icons@v3/icons/linkedin.svg" />
 </a>
                                                                                                                                                    
 <a href="https://github.com/ssinha2199">
